@@ -1,0 +1,26 @@
+{
+  "name": "abc_alumnos_mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DodoMCanva/ABC_Alumnos_MySQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/DodoMCanva/ABC_Alumnos_MySQL/issues"
+  },
+  "homepage": "https://github.com/DodoMCanva/ABC_Alumnos_MySQL#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "mysql2": "^3.17.3",
+    "readline-sync": "^1.4.10"
+  }
+}

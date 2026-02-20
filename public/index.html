@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema ABC Alumnos-Carreras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="sidebar">
+        <h2>Sistema ABC</h2>
+        <ul>
+            <li onclick="mostrarSeccion('alumnos')"><button>Alumnos</button></li>
+            <li onclick="mostrarSeccion('carreras')"><button>Carreras</button></li>
+            <li onclick="mostrarSeccion('asignar')"><button>Asignar</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <!-- Sección Alumnos -->
+        <!-- Sección Alumnos - MODIFICADA -->
+        <section id="alumnos" class="seccion activa">
+            <div class="header">
+                <h1>Alumnos</h1>
+                <button onclick="abrirModal('agregarAlumno')">+ Agregar</button>
+            </div>
+            <table id="tablaAlumnos">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Carrera</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Sección Carreras -->
+        <section id="carreras" class="seccion">
+            <div class="header">
+                <h1>Carreras</h1>
+                <button onclick="abrirModal('agregarCarrera')">+ Agregar</button>
+            </div>
+            <table id="tablaCarreras">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Alumnos</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Sección Asignar -->
+        <section id="asignar" class="seccion">
+            <h1>Asignar Alumno a Carrera</h1>
+            <div class="form-group">
+                <label>Alumno:</label>
+                <select id="selectAlumno"></select>
+            </div>
+            <div class="form-group">
+                <label>Carrera:</label>
+                <select id="selectCarrera"></select>
+            </div>
+            <button onclick="asignarAlumno()">Asignar</button>
+        </section>
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
